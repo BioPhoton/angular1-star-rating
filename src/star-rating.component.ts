@@ -28,7 +28,7 @@ export class StarRatingComponent implements ng.IComponentOptions {
             , getHalfStarVisible: '<'
 
             , onClick: '&?'
-            , onUpdate: '&?'
+            , onRatingChange: '&?'
         };
         this.replace = true;
         this.controller = StarRatingController;
