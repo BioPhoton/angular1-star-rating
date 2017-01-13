@@ -22,7 +22,7 @@
     "Angular1.5 Component",
     "Typescript"
   ],
-  "description": "Angular Star Rating is a Angular1.5 component written in typescript.",
+  "description": "Angular Star Rating is a Angular1.5 component written in typescript, based on css only techniques written in scss",
   "author": "Michael Hladky",
   "contributors": [
     {
