@@ -26,12 +26,12 @@
                     get-color="single.getColor"
                     get-half-star-visible="single.getHalfStarVisible"
                     on-click="single.onClick($event)"
-                    on-update="single.onUpdate($event)">
+                    on-rating-change="single.onRatingChange($event)">
             </star-rating-comp>
             <!--
             get-color="single.getColor(rating, numOfStars)"
                     on-click="single.onClick($event)"
-                    on-update="single.onUpdate(rating)"
+                    on-rating-change="single.onRatingChange(rating)"
             -->
         </p>
     </div>
@@ -61,7 +61,7 @@
 
 
                     get-half-star-class="single.getHalfStarClass(rating)"
-                    on-update="single.onUpdate(rating)"
+                    on-rating-change="single.onRatingChange(rating)"
                     on-click="single.onClick($event)">
             </star-rating-comp>
         </div>

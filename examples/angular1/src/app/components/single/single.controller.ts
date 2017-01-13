@@ -40,8 +40,8 @@ export class SingleController {
         console.log('single onClick rating: ',$event.rating);
     }
 
-    onUpdate($event:IStarRatingOnUpdateEvent): void {
-        console.log('single onUpdate rating: ',$event.rating);
+    onRatingChange($event:IStarRatingOnUpdateEvent): void {
+        console.log('single onRatingChange rating: ',$event.rating);
         this.rating = $event.rating;
     }
 
