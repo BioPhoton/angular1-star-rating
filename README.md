@@ -52,7 +52,14 @@ It also provides callbacks for all calculation functions used in the component a
 | IE | Firefox | Chrome | Safari | Opera |
 |--- |---	   |--- 	|---	 |---|
 | > 11  	|  > 50 	|   > 55	|  > 10 	|   > 41	|
-| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/ie.png" width="100">	| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/firefox.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/chrome.png" width="100">  | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/safari.png" width="100">  | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/opera.png" width="100"> |
+| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/ie.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/firefox.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/chrome.png" width="100">  | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/safari.png" width="100">  | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/opera.png" width="100"> |
+
+##Related Projects
+
+| Css | Angular1| Angular (<2) |
+|---  |---	    |--- 	       |
+| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/fality/css3.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/fality/angular1.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/fality/angular.png" width="100"> |
+| [Css Star Rating](https://github.com/BioPhoton/css-star-rating) | [Angular1 Star Rating](https://github.com/BioPhoton/angular1-star-rating) | [Angular Star Rating](https://github.com/BioPhoton/angular-star-rating) |
 
 
 ## Install
