@@ -58,7 +58,7 @@ It also provides callbacks for all calculation functions used in the component a
 
 | Css | Angular1| Angular (<2) |
 |---  |---	    |--- 	       |
-| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/family/css3.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/family/angular1.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/family/angular.png" width="100"> |
+| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/dev/resources/family/css3.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/dev/resources/family/angular1.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/dev/resources/family/angular.png" width="100"> |
 | [Css Star Rating](https://github.com/BioPhoton/css-star-rating) | [Angular1 Star Rating](https://github.com/BioPhoton/angular1-star-rating) | [Angular Star Rating](https://github.com/BioPhoton/angular-star-rating) |
 
 
