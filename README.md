@@ -58,13 +58,13 @@ It also provides callbacks for all calculation functions used in the component a
 
 | Css | Angular1| Angular (<2) |
 |---  |---	    |--- 	       |
-| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/fality/css3.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/fality/angular1.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/fality/angular.png" width="100"> |
+| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/famility/css3.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/famility/angular1.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/famility/angular.png" width="100"> |
 | [Css Star Rating](https://github.com/BioPhoton/css-star-rating) | [Angular1 Star Rating](https://github.com/BioPhoton/angular1-star-rating) | [Angular Star Rating](https://github.com/BioPhoton/angular-star-rating) |
 
 
 ## Install
 
-**Get Angular Star Rating:**
+**Get Angular Star Rating:*
  - clone & build this repository
  - [download as .zip](https://github.com/BioPhoton/angular1-star-rating/releases)
  - via **[npm](https://www.npmjs.org/)**: by running `$ npm install angular1-star-rating` from your console
