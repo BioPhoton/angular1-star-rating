@@ -1,3 +1,16 @@
+<a name="1.2.5"></a>
+## [1.2.5](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.4...v1.2.5) (2017-01-22)
+
+
+### Bug Fixes
+
+* **build:** rebuild project, edit comments ([0b611ae](https://github.com/BioPhoton/angular1-star-rating/commit/0b611ae))
+* **updated binding:** renamed onUpdate to onRatingChange ([6e59266](https://github.com/BioPhoton/angular1-star-rating/commit/6e59266))
+* **updated binding:** renamed onUpdate to onRatingChange ([889901b](https://github.com/BioPhoton/angular1-star-rating/commit/889901b))
+* **updated paths:** updated repo path and links ([b51dec6](https://github.com/BioPhoton/angular1-star-rating/commit/b51dec6))
+
+
+
 <a name="1.2.4"></a>
 ## [1.2.4](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.3...v1.2.4) (2017-01-13)
 
