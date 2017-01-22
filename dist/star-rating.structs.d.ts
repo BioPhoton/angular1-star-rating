@@ -21,7 +21,7 @@ export interface IStarRatingCompBindings {
     getHalfStarVisible?(rating: number): boolean;
     getColor?(rating: number, numOfStars: number, staticColor?: starRatingColors): starRatingColors;
     onClick?: ($event: any) => any;
-    onUpdate?: ($event: any) => any;
+    onRatingChange?: ($event: any) => any;
 }
 export interface IStarRatingOnClickEvent {
     rating: number;
