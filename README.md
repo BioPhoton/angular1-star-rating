@@ -1,4 +1,4 @@
-# Angular Star Rating ⭐⭐⭐⭐⭐
+# Angular1 Star Rating ⭐⭐⭐⭐⭐
 #### ⭐ Angular 1.5 Component written in typescript, based on css only techniques. ⭐
 
 ![License](https://img.shields.io/npm/l/angular1-star-rating.svg)
@@ -11,7 +11,7 @@
 [![NPM](https://nodei.co/npm/angular1-star-rating.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/angular1-star-rating)
 [![Package Quality](http://npm.packagequality.com/badge/angular1-star-rating.png)](http://packagequality.com/#?package=angular1-star-rating)  
 
-Angular Star Rating is a >1.5 Angular component written in typescript.   
+Angular1 Star Rating is a >1.5 Angular component written in typescript.   
 It is based on [css-star-rating](https://github.com/BioPhoton/css-star-rating), a fully featured and customizable css only star rating component written in scss.  
 
 ![Angular1-Star-Rating](https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/example-usage.gif)
@@ -49,7 +49,7 @@ It also provides callbacks for all calculation functions used in the component a
 - [x] **getColor** - Custom function to calculate the color for a rating
 - [x] **getHalfStarVisible** - Custom function to calculate value for displaying half stars or not
 - [x] **onClick** - Event emitter for onClick action
-- [x] **onUpdate** - Event emitter for onUpdate event
+- [x] **onRatingChange** - Event emitter for onRatingChange event
 
 ## Browser support
 
@@ -62,7 +62,7 @@ It also provides callbacks for all calculation functions used in the component a
 
 ## Install
 
-**Get Angular Star Rating:*
+**Get Angular1 Star Rating:*
  - clone & build this repository
  - [download as .zip](https://github.com/BioPhoton/angular1-star-rating/releases)
  - via **[npm](https://www.npmjs.org/)**: by running `$ npm install angular1-star-rating` from your console
@@ -87,7 +87,7 @@ angular.module('myApp', ['star-rating'])
          size="'large'"
          rating="3"
          label-text="'Rating: '"
-         on-update="crtl.onUpdate($event)">
+         on-rating-change="crtl.onRatingChange($event)">
  </star-rating-comp>
 ```
 
@@ -293,14 +293,14 @@ function onClick($event) {
 ```
 <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-on_click-counter.PNG" width="290">
 
-**onUpdate**: Function (Optional)  
+**onRatingChange**: Function (Optional)  
 Callback function for rating update event 
 Params: $event
 ```html
-<star-rating-comp on-update="parentCtrl.onUpdate($event)"></star-rating-comp>
+<star-rating-comp on-rating-change="parentCtrl.onRatingChange($event)"></star-rating-comp>
 ```
 ```javascript
-function onUpdate($event) {
+function onRatingChange($event) {
     parent.rating = $event.rating;
 }
 ```
