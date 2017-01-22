@@ -57,7 +57,7 @@ describe('Star rating controller', () => {
         expect(starRatingCtrl.getColor).toBe(undefined);
         //expect(typeof starRatingCtrl.getHalfStarVisible).toBe("function");
         //&
-        expect(typeof starRatingCtrl.onUpdate).toBe("function");
+        expect(typeof starRatingCtrl.onRatingChange).toBe("function");
         expect(typeof starRatingCtrl.onClick).toBe("function");
 
         //ctrl only
@@ -141,7 +141,7 @@ describe('Star rating controller', () => {
             , onClick: function ($event:IStarRatingOnUpdateEvent) {
                 return $event;
             }
-            , onUpdate: function ($event:IStarRatingOnUpdateEvent) {
+            , onRatingChange: function ($event:IStarRatingOnUpdateEvent) {
                 return $event;
             }
         };
@@ -162,7 +162,7 @@ describe('Star rating controller', () => {
         expect(starRatingCtrl.getColor(1, 5, 'default')).toBe(bindings.getColor(1, 5, 'default'));
         expect(starRatingCtrl.getHalfStarVisible(1)).toBe(bindings.getHalfStarVisible(1));
         expect(starRatingCtrl.onClick({$event: {rating: 1}}).rating).toBe(bindings.onClick({$event: {rating: 1}}).rating);
-        expect(starRatingCtrl.onUpdate({$event: {rating: 2}}).rating).toBe(bindings.onUpdate({$event: {rating: 2}}).rating);
+        expect(starRatingCtrl.onRatingChange({$event: {rating: 2}}).rating).toBe(bindings.onRatingChange({$event: {rating: 2}}).rating);
     });
 
     it("should return proper values when firing _getColor function", () => {
@@ -288,20 +288,20 @@ describe('Star rating controller', () => {
     });
 
 
-    it("should fire onUpdate when set", () => {
+    it("should fire onRatingChange when set", () => {
         let bindings = <IStarRatingCompBindings>{
-            onUpdate: function ($event:IStarRatingOnUpdateEvent) {
+            onRatingChange: function ($event:IStarRatingOnUpdateEvent) {
                 return $event;
             }
         };
 
         starRatingCtrl = getStarRatingCtrl(bindings);
         //create spys
-        spyOn(starRatingCtrl, "onUpdate");
+        spyOn(starRatingCtrl, "onRatingChange");
         starRatingCtrl.rating = 4;
 
         //spys fired
-        expect(starRatingCtrl.onUpdate).toHaveBeenCalled();
+        expect(starRatingCtrl.onRatingChange).toHaveBeenCalled();
 
     });
 

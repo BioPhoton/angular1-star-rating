@@ -1,17 +1,15 @@
 # Angular Star Rating ⭐⭐⭐⭐⭐
 #### ⭐ Angular 1.5 Component written in typescript, based on css only techniques. ⭐
 
-![License](https://img.shields.io/npm/l/angular-star-rating.svg)
+![License](https://img.shields.io/npm/l/angular1-star-rating.svg)
 ![Bower Version](https://img.shields.io/bower/v/angular1-star-rating.svg)
-[![NPM Version](https://img.shields.io/npm/v/angular-star-rating.svg)](https://www.npmjs.com/package/angular-star-rating)  
+[![NPM Version](https://img.shields.io/npm/v/angular1-star-rating.svg)](https://www.npmjs.com/package/angular1-star-rating)  
 [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/BioPhoton/angular1-star-rating)  
 [![Build Status](https://travis-ci.org/BioPhoton/angular1-star-rating.svg?branch=master)](https://travis-ci.org/BioPhoton/angular1-star-rating)
-[![NPM](https://img.shields.io/npm/dt/angular-star-rating.svg)](https://www.npmjs.com/package/angular-star-rating)  
+[![NPM](https://img.shields.io/npm/dt/angular1-star-rating.svg)](https://www.npmjs.com/package/angular1-star-rating)  
 
-[![NPM](https://nodei.co/npm/angular-star-rating.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/angular-star-rating)
-[![NPM](https://nodei.co/npm-dl/angular-star-rating.png?height=3&months=3)](https://npmjs.org/angular-star-rating)
-
-[![Package Quality](http://npm.packagequality.com/badge/angular-star-rating.png)](http://packagequality.com/#?package=angular-star-rating)  
+[![NPM](https://nodei.co/npm/angular1-star-rating.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/angular1-star-rating)
+[![Package Quality](http://npm.packagequality.com/badge/angular1-star-rating.png)](http://packagequality.com/#?package=angular1-star-rating)  
 
 Angular Star Rating is a >1.5 Angular component written in typescript.   
 It is based on [css-star-rating](https://github.com/BioPhoton/css-star-rating), a fully featured and customizable css only star rating component written in scss.  
@@ -21,6 +19,13 @@ It is based on [css-star-rating](https://github.com/BioPhoton/css-star-rating), 
 ## DEMO
 - [x] [Example-App](https://github.com/BioPhoton/angular1-star-rating/tree/master/examples/angular1)  
 - [x] [Example-App-Plnkr](https://run.plnkr.co/plunks/2tw2z7/)  
+
+##Related Projects
+
+| Css | Angular1 (>=1.5)| Angular (>=2) |
+|---  |---	    |--- 	       |
+| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/dev/resources/family/css3.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/dev/resources/family/angular1.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/dev/resources/family/angular.png" width="80"> |
+| [Css Star Rating](https://github.com/BioPhoton/css-star-rating) | [Angular1 Star Rating](https://github.com/BioPhoton/angular1-star-rating) | [Angular Star Rating](https://github.com/BioPhoton/angular-star-rating) |
 
 ## Features
 This module implements all Features from [CSS-STAR-RATING](https://github.com/BioPhoton/css-star-rating).
@@ -52,23 +57,23 @@ It also provides callbacks for all calculation functions used in the component a
 | IE | Firefox | Chrome | Safari | Opera |
 |--- |---	   |--- 	|---	 |---|
 | > 11  	|  > 50 	|   > 55	|  > 10 	|   > 41	|
-| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/ie.png" width="100">	| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/firefox.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/chrome.png" width="100">  | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/safari.png" width="100">  | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/opera.png" width="100"> |
+| <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/ie.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/firefox.png" width="100"> | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/chrome.png" width="100">  | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/safari.png" width="100">  | <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/browser/opera.png" width="100"> |
 
 
 ## Install
 
-**Get Angular Star Rating:**
+**Get Angular Star Rating:*
  - clone & build this repository
  - [download as .zip](https://github.com/BioPhoton/angular1-star-rating/releases)
- - via **[npm](https://www.npmjs.org/)**: by running `$ npm install angular-star-rating` from your console
+ - via **[npm](https://www.npmjs.org/)**: by running `$ npm install angular1-star-rating` from your console
  - via **[bower](https://bower.io/)**: by running `$ bower install angular1-star-rating` from your console
- - via **[cdn](https://cdn.rawgit.com/BioPhoton/angular1-star-rating/2062d6bf/dist/index.js)**: by adding the git-cdn reference in your index.html  
+ - via **[cdn](https://cdn.rawgit.com/BioPhoton/angular1-star-rating/v1.2.4/dist/index.js)**: by adding the git-cdn reference in your index.html  
    ```html
-      <script src="https://cdn.rawgit.com/BioPhoton/angular1-star-rating/2062d6bf/dist/index.js"></script>
+   <script src="https://cdn.rawgit.com/BioPhoton/angular1-star-rating/v1.2.4/dist/index.js"></script>
    ```
 **Load library**
 ```html
-<script src="[bower or npm folder or git-cdn path]/angular-star-rating/dist/index.js"></script>
+<script src="[bower or npm folder or git-cdn path]/angular1-star-rating/dist/index.js"></script>
 ```
 
 **Inject it into angular**

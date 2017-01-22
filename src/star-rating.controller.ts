@@ -132,7 +132,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
 
     //outputs
     onClick?: ($event: any) =>  IStarRatingOnClickEvent;
-    onUpdate?: ($event: any) => IStarRatingOnUpdateEvent;
+    onRatingChange?: ($event: any) => IStarRatingOnUpdateEvent;
 
     //ctrl only
     classEmpty: string;
@@ -184,9 +184,9 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         //update calculated Color
         this.setColor();
 
-        //fire onUpdate event
+        //fire onRatingChange event
         let $event:IStarRatingOnUpdateEvent = {rating: this._rating};
-        this.onUpdate({$event:$event});
+        this.onRatingChange({$event:$event});
     }
     get rating(): number {
         return this._rating;
@@ -320,7 +320,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         this.onClick = function ($event: IStarRatingOnClickEvent) {
             return <IStarRatingOnClickEvent>{}
         };
-        this.onUpdate = function ($event: IStarRatingOnUpdateEvent) {
+        this.onRatingChange = function ($event: IStarRatingOnUpdateEvent) {
             return <IStarRatingOnUpdateEvent>{}
         };
     }
