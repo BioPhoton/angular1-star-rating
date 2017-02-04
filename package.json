@@ -89,6 +89,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2",
+    "webpack-node-externals": "^1.5.4",
     "wrench": "^1.5.9",
     "yargs": "^6.3.0"
   },

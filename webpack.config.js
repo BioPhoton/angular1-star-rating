@@ -2,6 +2,7 @@ var path = require('path');
 
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('./node_modules/html-webpack-plugin');
+var nodeExternals = require('webpack-node-externals');
 
 var base_c = require('./chore/chore.config');
 
@@ -20,7 +21,12 @@ module.exports = function makeWebpackConfig() {
         , root: __dirname
     };
 
-    config.entry = {
+    //Exclude all external files from bundle
+    config.target = 'node'; // in order to ignore built-in modules like path, fs, etc.
+    config.externals = [nodeExternals()]; // in order to ignore all modules in node_modules folder
+
+
+        config.entry = {
         app: path.join(__dirname, base_c.src, 'index.ts')
     };
 
