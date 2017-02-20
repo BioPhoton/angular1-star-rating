@@ -83,11 +83,7 @@ angular.module('myApp', ['star-rating'])
 
 **Use it**
 ```html
-<star-rating-comp
-         size="'large'"
-         rating="3"
-         label-text="'Rating: '"
-         on-rating-change="crtl.onRatingChange($event)">
+<star-rating-comp rating="'3.0'">
  </star-rating-comp>
 ```
 
