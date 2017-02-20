@@ -1,6 +1,6 @@
 {
-  "name": "angular-star-rating",
-  "version": "1.2.5",
+  "name": "angular1-star-rating",
+  "version": "1.2.7",
   "license": "MIT",
   "keywords": [
     "Rating",
@@ -22,7 +22,7 @@
     "Angular1.5 Component",
     "Typescript"
   ],
-  "description": "Angular Star Rating is a Angular1.5 component written in typescript, based on css only techniques written in scss",
+  "description": "Angular1 Star Rating is a Angular1.5 component written in typescript, based on css only techniques written in scss",
   "author": "Michael Hladky",
   "contributors": [
     {
