@@ -1,3 +1,14 @@
+<a name="1.2.6"></a>
+## [1.2.6](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.5...v1.2.6) (2017-02-20)
+
+
+### Bug Fixes
+
+* **build:** updated bower json ([85b5554](https://github.com/BioPhoton/angular1-star-rating/commit/85b5554))
+* **version bump:** bumped version to 1.2.6 ([398aa49](https://github.com/BioPhoton/angular1-star-rating/commit/398aa49))
+
+
+
 <a name="1.2.5"></a>
 ## [1.2.5](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.4...v1.2.5) (2017-01-22)
 
