@@ -10,9 +10,9 @@ import {
     , IStarRatingOnUpdateEvent
 } from "star-rating.structs"
 
-import IChangesObject = angular.IChangesObject;
+import IChangesObject = ng.IChanges;
 
-export class StarRatingController implements ng.IComponentController, IStarRatingCompBindings{
+export class StarRatingController implements ng.IComponentController, IStarRatingCompBindings {
 
     static DefaultClassEmpty: string = "default-star-empty-icon";
 
@@ -186,7 +186,9 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
 
         //fire onRatingChange event
         let $event:IStarRatingOnUpdateEvent = {rating: this._rating};
-        this.onRatingChange({$event:$event});
+        if(typeof this.onRatingChange === 'function') {
+            this.onRatingChange({$event:$event});
+        }
     }
     get rating(): number {
         return this._rating;
@@ -430,7 +432,9 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
 
         //fire onClick event
         let $event:IStarRatingOnClickEvent = {rating: rating};
-        this.onClick({$event:$event});
+        if(typeof this.onClick === 'function') {
+            this.onClick({$event:$event});
+        }
     }
 
 }
