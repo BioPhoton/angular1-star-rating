@@ -1,13 +1,14 @@
 import Bootstrap = require('bootstrap/dist/css/bootstrap.css');
 //import StarRatingIcons = require('angular-star-rating/dist/assets/images/star-rating.icons.svg');
 let bootstrap = Bootstrap;
+import angularStars = require('angular1-star-rating/dist/index.js');
 
 import * as angular from 'angular';
 import 'angular-ui-router';
 import * as uiRouter from "angular-ui-router";
+var angularStars = angularStars;
 
-import 'angular-star-rating';
-import svg from "angular-star-rating/dist/assets/images/star-rating.icons.svg";
+import svg from "angular1-star-rating/dist/assets/images/star-rating.icons.svg";
 
 let svg = svg;
 
