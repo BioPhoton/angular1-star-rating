@@ -1,3 +1,14 @@
+<a name="1.2.7"></a>
+## [1.2.7](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.6...v1.2.7) (2017-02-20)
+
+
+### Bug Fixes
+
+* **eventemitter is not a function:** implement checks ([2455844](https://github.com/BioPhoton/angular1-star-rating/commit/2455844))
+* **version bump:** bumped version to 1.2.7 ([62ffffb](https://github.com/BioPhoton/angular1-star-rating/commit/62ffffb))
+
+
+
 <a name="1.2.6"></a>
 ## [1.2.6](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.5...v1.2.6) (2017-02-20)
 
