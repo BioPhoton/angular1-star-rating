@@ -2,8 +2,8 @@
   "compilerOptions": {
     "declaration":true,
     "target": "es5",
-    "sourceMap": true
-    , "outDir": "./"
+    "sourceMap": true,
+    "outDir": "./"
   },
   "exclude": [
      "./src/**/*.spec.ts",

@@ -17,17 +17,18 @@ var gulp = require('gulp'),
   ts = require('gulp-typescript'),
   $ = require('gulp-load-plugins')();
 
-var config = require('../config.js'),
+var config = require('../../chore.config.js'),
   path = require('path');
 
 
 var defaultConfig = {
-  srcFiles: ['./src/**/*.ts', './src/**/*.js'],
-  buildFolder: (config.buildFolder) ? config.buildFolder : 'dist/',
+  srcFiles: ['./src/**/!(*.spec).ts', './src/**/!(*.spec).js'],
+  buildFolder: (config.buildFolder) ? config.buildFolder+'js/' : 'dist/js/',
   options: {
-    target: "ES5",
-    sourceMap: true,
-    allowJs: true
+    target: "es5",
+    //module: "CommonJS",
+    //sourceMap: true,
+    //allowJs: true
   }
 };
 
