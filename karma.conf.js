@@ -27,8 +27,8 @@ module.exports = function (config) {
         files: [
             "./node_modules/angular/angular.js"
             , "./dist/index.js"
-            //, "./src/index.ts"
-            , "./src/star-rating.controller.spec.ts"
+            , "./src/index.spec.ts"
+            //, "./src/star-rating.controller.spec.ts"
         ],
 
 

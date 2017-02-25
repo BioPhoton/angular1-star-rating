@@ -57,8 +57,8 @@ describe('Star rating controller', () => {
         expect(starRatingCtrl.getColor).toBe(undefined);
         //expect(typeof starRatingCtrl.getHalfStarVisible).toBe("function");
         //&
-        expect(typeof starRatingCtrl.onRatingChange).toBe("function");
-        expect(typeof starRatingCtrl.onClick).toBe("function");
+        expect(typeof starRatingCtrl.onRatingChange).toBe("undefined");
+        expect(typeof starRatingCtrl.onClick).toBe("undefined");
 
         //ctrl only
         expect(starRatingCtrl.classEmpty).toBe(StarRatingController.DefaultClassEmpty);
