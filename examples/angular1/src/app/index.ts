@@ -3,6 +3,7 @@ import Bootstrap = require('bootstrap/dist/css/bootstrap.css');
 let bootstrap = Bootstrap;
 import angularStars = require('angular1-star-rating/dist/index.js');
 
+import 'angular';
 import * as angular from 'angular';
 import 'angular-ui-router';
 import * as uiRouter from "angular-ui-router";
