@@ -1,3 +1,19 @@
+<a name="1.2.8"></a>
+## [1.2.8](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.7...v1.2.8) (2017-02-25)
+
+
+### Bug Fixes
+
+* **angular warning:** changed bundling process to exclude external dependencies. [#51](https://github.com/BioPhoton/angular1-star-rating/issues/51) ([ecc01e7](https://github.com/BioPhoton/angular1-star-rating/commit/ecc01e7))
+* **build:** rebuild ([6d491c0](https://github.com/BioPhoton/angular1-star-rating/commit/6d491c0))
+* **build:** updated dist and example ([037813d](https://github.com/BioPhoton/angular1-star-rating/commit/037813d))
+* **events:** fixed onRatingUpdated error ([f788d95](https://github.com/BioPhoton/angular1-star-rating/commit/f788d95)), closes [#44](https://github.com/BioPhoton/angular1-star-rating/issues/44)
+* **example:** create js example ([8930056](https://github.com/BioPhoton/angular1-star-rating/commit/8930056))
+* **example:** use dist.index.js ([f2ece08](https://github.com/BioPhoton/angular1-star-rating/commit/f2ece08))
+* **readme:** updated readme ([4024afd](https://github.com/BioPhoton/angular1-star-rating/commit/4024afd))
+
+
+
 <a name="1.2.7"></a>
 ## [1.2.7](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.6...v1.2.7) (2017-02-20)
 
