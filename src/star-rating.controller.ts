@@ -319,13 +319,8 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         this.setColor();
 
         //set default Outputs
-        this.onClick = function ($event: IStarRatingOnClickEvent) {
-            return <IStarRatingOnClickEvent>{}
-        };
-        this.onRatingChange = function ($event: IStarRatingOnUpdateEvent) {
-            return <IStarRatingOnUpdateEvent>{}
-        };
     }
+
 
     /**
      * $onChanges

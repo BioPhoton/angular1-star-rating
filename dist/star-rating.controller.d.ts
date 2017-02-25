@@ -63,7 +63,7 @@ export declare class StarRatingController implements ng.IComponentController, IS
     getHalfStarVisible: (rating: number) => boolean;
     getColor: (rating: number, numOfStars: number, staticColor?: starRatingColors) => starRatingColors;
     onClick?: ($event: any) => IStarRatingOnClickEvent;
-    onUpdate?: ($event: any) => IStarRatingOnUpdateEvent;
+    onRatingChange?: ($event: any) => IStarRatingOnUpdateEvent;
     classEmpty: string;
     classHalf: string;
     classFilled: string;
@@ -90,6 +90,7 @@ export declare class StarRatingController implements ng.IComponentController, IS
     setColor(): void;
     setHalfStarVisible(): void;
     constructor();
+    $onInit(): void;
     /**
      * $onChanges
      *

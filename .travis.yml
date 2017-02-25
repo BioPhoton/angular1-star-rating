@@ -11,6 +11,7 @@ cache:
 install:
   - npm i -g typings
   - npm i
+  - typings install
 
 before_script:
 

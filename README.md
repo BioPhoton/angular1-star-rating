@@ -71,9 +71,15 @@ It also provides callbacks for all calculation functions used in the component a
    ```html
    <script src="https://cdn.rawgit.com/BioPhoton/angular1-star-rating/v1.2.4/dist/index.js"></script>
    ```
-**Load library**
+
+**Load library as minified js file**
 ```html
 <script src="[bower or npm folder or git-cdn path]/angular1-star-rating/dist/index.js"></script>
+```
+
+**Load library as ts module*
+```typescript
+    import angularStars = require('angular1-star-rating/dist/index.js');
 ```
 
 **Inject it into angular**
@@ -83,12 +89,7 @@ angular.module('myApp', ['star-rating'])
 
 **Use it**
 ```html
-<star-rating-comp
-         size="'large'"
-         rating="3"
-         label-text="'Rating: '"
-         on-rating-change="crtl.onRatingChange($event)">
- </star-rating-comp>
+<star-rating-comp rating="'3.0'"></star-rating-comp>
 ```
 
 ## Component Properties
@@ -160,7 +161,7 @@ Options: no, between, around
 Default: no  
 
 ```html
-<star-rating-comp space="around"></star-rating-comp>
+<star-rating-comp space="'around'"></star-rating-comp>
 ```
 <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-space-default.PNG" width="290">
 <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-space-around.PNG" width="290">

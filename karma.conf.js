@@ -25,15 +25,16 @@ module.exports = function (config) {
         },
 
         files: [
-              "./dist/index.js"
-            //, "./src/index.ts"
+            "./node_modules/angular/angular.js"
+            , "./dist/index.js"
             , "./src/index.spec.ts"
+            //, "./src/star-rating.controller.spec.ts"
         ],
 
 
         // Karma plugins loaded
         plugins: [
-            "karma-webpack"
+              "karma-webpack"
             , "karma-jasmine"
             , 'karma-typescript-preprocessor'
             , "karma-coverage"
@@ -47,7 +48,7 @@ module.exports = function (config) {
         // Source files that you wanna generate coverage for.
         // Do not include tests or libraries (these files will be instrumented by Istanbul)
         preprocessors: {
-           // "./src/index.ts": ["webpack"]
+            // "./src/index.ts": ["webpack"]
              "./src/*.spec.ts": ["webpack", "coverage"]
             //"src/**/*!(*.spec*|*.protractor*|*.mock*|*.bundle*).ts": ["webpack", "coverage"]
 

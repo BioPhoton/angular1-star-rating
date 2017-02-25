@@ -2,6 +2,7 @@ var path = require('path');
 
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('./node_modules/html-webpack-plugin');
+var nodeExternals = require('webpack-node-externals');
 
 var base_c = require('./chore/chore.config');
 
@@ -20,6 +21,11 @@ module.exports = function makeWebpackConfig() {
         , root: __dirname
     };
 
+    //Exclude all external files from bundle
+    config.externals = {
+      'angular' : 'angular'
+    };
+
     config.entry = {
         app: path.join(__dirname, base_c.src, 'index.ts')
     };
@@ -28,6 +34,7 @@ module.exports = function makeWebpackConfig() {
         filename: "index.js"
         , path: path.join(__dirname, base_c.dist)
     };
+    //config.output.libraryTarget = "amd";
     //config.output.filename = "[name].js";
 
 
@@ -42,7 +49,7 @@ module.exports = function makeWebpackConfig() {
          }
          ],*/
         loaders: [
-              {test: /\.css$/, loader: "style!css"}
+             {test: /\.css$/, loader: "style!css"}
             , {test: /\.scss$/, loader: "style!css!sass"}
             // specify option using query
             , {test: /\.tsx?$/, exculde: "*.jasmine.ts", loader: 'ts-loader?compiler=ntypescript'}

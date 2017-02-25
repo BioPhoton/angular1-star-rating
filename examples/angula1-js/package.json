@@ -1,0 +1,38 @@
+{
+  "name": "angular-star-rating-examples",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": [
+    "Angular1.5",
+    "Typescript",
+    "SVG"
+  ],
+  "description": "Angular star rating component demo",
+  "author": "Michael Hladky",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BioPhoton/angular-star-rating.git"
+  },
+  "homepage": "https://github.com/BioPhoton/angular-star-rating#readme",
+  "main": "index.js",
+  "devDependencies": {
+    "angular1-star-rating": "1.2.5",
+    "bootstrap": "^4.0.0-alpha.4",
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "fontawesome": "^4.5.0",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-typescript": "^3.1.5",
+    "node-sass": "^3.10.0",
+    "ntypescript": "^1.201609060105.1"
+  },
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-ui-router": "^0.3.1"
+  },
+  "scripts": {
+    "serve": "http-server -c-1 -o -p 9875 ./src"
+  }
+}
