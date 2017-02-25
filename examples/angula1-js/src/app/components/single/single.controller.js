@@ -9,7 +9,7 @@ function singleController () {
     this.spaceOptions = ['around', 'between', 'no'];
 
     //component input properties (> bindings)
-    this.id;
+    this.id = "test-id";
     this.numOfStars= 5;
     this.rating = 3.5;
     this.labelText;
@@ -37,7 +37,10 @@ function singleController () {
 
     function onRatingChange($event) {
         console.log('single onRatingChange rating: ',$event.rating);
-        this.rating = $event.rating;
+        if($event.rating)  {
+            console.log('single onRatingChange rating not false: ',$event.rating);
+            this.rating = $event.rating;
+        }
     }
 
     function updateGetColorBinding() {

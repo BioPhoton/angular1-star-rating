@@ -8,7 +8,7 @@
             a fully featured and customizable css only star rating component written in scss.
         </p>
         <p>
-            {{single.rating}}
+            {{single.id}}{{single.rating}}
             <star-rating-comp
                     id="single.id"
                     rating="single.rating"
@@ -26,7 +26,8 @@
                     get-color="single.getColor"
                     get-half-star-visible="single.getHalfStarVisible"
                     on-click="single.onClick($event)"
-                    on-rating-change="single.onRatingChange($event)">
+                    on-rating-change="single.onRatingChange($event)"
+            >
             </star-rating-comp>
             <!--
             get-color="single.getColor(rating, numOfStars)"
@@ -201,7 +202,7 @@
                     <div class="form-group">
                         <label class="col-6 col-form-label">Rating</label>
                         <div class="col-6">
-                            <input type="number" class="form-control" placeholder="rating" step="0.5" ng-model="single.rating">
+                            <!--<input type="number" class="form-control" placeholder="rating" step="0.5" ng-model="single.rating">-->
                         </div>
                     </div>
 
