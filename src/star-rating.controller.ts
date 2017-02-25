@@ -159,10 +159,13 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         this.setColor();
     }
     get numOfStars(): number {
-        return this._numOfStars;
+        return this._numOfStars || StarRatingController.DefaultNumOfStars;
     }
 
     set rating(value: number) {
+        if(value === undefined) {
+            return
+        }
         //validate and apply newRating
         let newRating:number = 0;
         if( value >= 0
@@ -174,7 +177,6 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
             newRating = this.numOfStars;
         }
         this._rating = newRating;
-
         //update ratingAsInteger. rating parsed to int for the value-[n] modifier
         this.ratingAsInteger = parseInt(this._rating.toString());
 
@@ -314,11 +316,11 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
 
         //set default Component Inputs
         this._numOfStars = StarRatingController.DefaultNumOfStars;
-        this._rating = 0;
         this.stars = StarRatingController._getStarsArray(this.numOfStars);
         this.setColor();
 
         //set default Outputs
+
     }
 
 
@@ -405,7 +407,6 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         if (valueChanged('starType', changes)) {
             this.starType = changes.starType.currentValue;
         }
-
     }
 
     /**
