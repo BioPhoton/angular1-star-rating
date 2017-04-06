@@ -13,13 +13,13 @@
         <i class="star-half {{$ctrl.classHalf}}"></i>
         <i class="star-filled {{$ctrl.classFilled}}"></i>
 
-        <svg class="star-empty {{$ctrl.classEmpty}}">
+        <svg class="star-empty {{$ctrl.classEmpty}}" ng-if="$ctrl.starType ==='svg'">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{$ctrl.pathEmpty}}"></use>
         </svg>
-        <svg class="star-half {{$ctrl.classHalf}}">
+        <svg class="star-half {{$ctrl.classHalf}}" ng-if="$ctrl.starType ==='svg'">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{$ctrl.pathHalf}}"></use>
         </svg>
-        <svg class="star-filled {{$ctrl.classFilled}}">
+        <svg class="star-filled {{$ctrl.classFilled}}" ng-if="$ctrl.starType ==='svg'">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{$ctrl.pathFilled}}"></use>
         </svg>
 
