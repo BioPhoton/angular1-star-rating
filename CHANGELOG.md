@@ -1,3 +1,25 @@
+<a name="1.2.10"></a>
+## [1.2.10](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.8...v1.2.10) (2017-04-07)
+
+
+### Bug Fixes
+
+* **chore:** updated dependencies and build scripts ([f25bc1a](https://github.com/BioPhoton/angular1-star-rating/commit/f25bc1a))
+* **defaults:** provide defaults for numOfStars ([e225096](https://github.com/BioPhoton/angular1-star-rating/commit/e225096))
+* **packages:** updates dependencies ([111314f](https://github.com/BioPhoton/angular1-star-rating/commit/111314f))
+* **svg mode:** remove svg's if not in use ([891d565](https://github.com/BioPhoton/angular1-star-rating/commit/891d565))
+* **syntax:** change let to const ([d4eb749](https://github.com/BioPhoton/angular1-star-rating/commit/d4eb749))
+* **template:** refactored class names ([ee2270f](https://github.com/BioPhoton/angular1-star-rating/commit/ee2270f)), closes [#58](https://github.com/BioPhoton/angular1-star-rating/issues/58)
+
+
+### Features
+
+* **hover:** finished hover implementation ([a1c5341](https://github.com/BioPhoton/angular1-star-rating/commit/a1c5341)), closes [#55](https://github.com/BioPhoton/angular1-star-rating/issues/55)
+* **hover:** start implement hover into component ([819171b](https://github.com/BioPhoton/angular1-star-rating/commit/819171b))
+* **labelHidden:** finished labelHidden implementation ([dcb0da5](https://github.com/BioPhoton/angular1-star-rating/commit/dcb0da5))
+
+
+
 <a name="1.2.9"></a>
 ## [1.2.9](https://github.com/BioPhoton/angular1-star-rating/compare/v1.2.8...v1.2.9) (2017-02-25)
 
