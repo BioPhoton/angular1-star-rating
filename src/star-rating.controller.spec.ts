@@ -46,13 +46,15 @@ describe('Star rating controller', () => {
         expect(starRatingCtrl.labelText).toBe(undefined);
         expect(starRatingCtrl.staticColor).toBe(undefined);
         expect(starRatingCtrl.labelPosition).toBe(undefined);
+        expect(starRatingCtrl.labelHidden).toBe(false);
+        expect(starRatingCtrl.showHoverStars).toBe(false);
         expect(starRatingCtrl.speed).toBe(undefined);
         expect(starRatingCtrl.size).toBe(undefined);
         expect(starRatingCtrl.starType).toBe(undefined);
         expect(starRatingCtrl.space).toBe(undefined);
         expect(starRatingCtrl.readOnly).toBe(undefined);
         expect(starRatingCtrl.disabled).toBe(undefined);
-        expect(starRatingCtrl.rating).toBe(0);
+        expect(starRatingCtrl.rating).toBe(undefined);
         expect(starRatingCtrl.numOfStars).toBe(StarRatingController.DefaultNumOfStars);
         expect(starRatingCtrl.getColor).toBe(undefined);
         //expect(typeof starRatingCtrl.getHalfStarVisible).toBe("function");
@@ -123,6 +125,8 @@ describe('Star rating controller', () => {
             , labelText: 'custom-text'
             , staticColor: 'positive'
             , labelPosition: 'right'
+            , labelHidden: false
+            , showHoverStars: true
             , speed: 'immediately'
             , size: 'small'
             , starType: 'icon'
@@ -152,6 +156,8 @@ describe('Star rating controller', () => {
         expect(starRatingCtrl.labelText).toBe(bindings.labelText);
         expect(starRatingCtrl.staticColor).toBe(bindings.staticColor);
         expect(starRatingCtrl.labelPosition).toBe(bindings.labelPosition);
+        expect(starRatingCtrl.labelHidden).toBe(bindings.labelHidden);
+        expect(starRatingCtrl.showHoverStars).toBe(bindings.showHoverStars);
         expect(starRatingCtrl.speed).toBe(bindings.speed);
         expect(starRatingCtrl.size).toBe(bindings.size);
         expect(starRatingCtrl.starType).toBe(bindings.starType);

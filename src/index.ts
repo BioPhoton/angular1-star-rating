@@ -5,8 +5,8 @@ import {StarRatingComponent} from "./star-rating.component";
 
 import styles = require('css-star-rating/dist/scss/star-rating.scss');
 import icons = require('css-star-rating/dist/images/star-rating.icons.svg');
-let styles = styles;
-let icons = icons;
+const styles = styles;
+const icons = icons;
 
 export {
       starRatingSizes

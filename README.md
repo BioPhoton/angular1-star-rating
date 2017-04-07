@@ -20,7 +20,7 @@ It is based on [css-star-rating](https://github.com/BioPhoton/css-star-rating), 
 - [x] [Example-App](https://github.com/BioPhoton/angular1-star-rating/tree/master/examples/angular1)  
 - [x] [Example-App-Plnkr](https://run.plnkr.co/plunks/2tw2z7/)  
 
-##Related Projects
+## Related Projects
 
 | Css | Angular1 (>=1.5)| Angular (>=2) |
 |---  |---	    |--- 	       |
@@ -34,6 +34,7 @@ It also provides callbacks for all calculation functions used in the component a
 - [x] **id** - The html id attribute of the star rating
 - [x] **rating** -  The actual Star rating
 - [x] **showHalfStars** - To display half stars or not
+- [x] **showHoverStars** - To display hover state on stars or not
 - [x] **numOfStars** - The max number of stars you can rate
 - [x] **size** - The different sizes of the component
 - [x] **space** - The space between stars
@@ -41,7 +42,7 @@ It also provides callbacks for all calculation functions used in the component a
 - [x] **disabled** - Component is in disabled mode
 - [x] **starType** - Stars can be displayed as svg, character or icon-font like fontawesome, glyphicons or ionicons
 - [x] **labelText** - The value of the label text
-- [x] **labelVisible** - If the label is visible or not
+- [x] **labelHidden** - If the label is visible or not
 - [x] **labelPosition** - The position of the label
 - [x] **speed** - The duration of the animation
 - [x] **direction** - The direction of the component i.e. right to left
@@ -80,6 +81,7 @@ It also provides callbacks for all calculation functions used in the component a
 **Load library as ts module*
 ```typescript
     import angularStars = require('angular1-star-rating/dist/index.js');
+    const angularStars = angularStars;
 ```
 
 **Inject it into angular**
@@ -123,6 +125,18 @@ Default: false
 ```
 <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-show_half_stars-false.PNG" width="290">
 <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-show_half_stars-true.PNG" width="290">  
+
+**showHoverStars**: boolean (Optional)
+To show hover state on stars or not  
+Options: true, false  
+Default: false
+
+```html
+<star-rating-comp show-hover-stars="true"></star-rating-comp>
+```
+<img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-show_hover_stars-false.PNG" width="290">
+<img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-show_hover_stars-true.PNG" width="290">  
+
 
 **numOfStars**: number (Optional)  
 The possible number of stars to choose from  

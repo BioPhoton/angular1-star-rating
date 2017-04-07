@@ -1,5 +1,6 @@
 import {starRatingColors, starRatingPosition, starRatingStarTypes, starRatingSpeed, starRatingSizes, starRatingStarSpace} from "../../../dist/star-rating.controller.d";
 import {IStarRatingOnUpdateEvent, IStarRatingOnClickEvent} from "../../../../../../dist/star-rating.controller";
+import {IStarRatingOnHoverEvent} from "../../../../../../src/star-rating.structs";
 
 export class SingleController {
 
@@ -18,6 +19,7 @@ export class SingleController {
     numOfStars:number = 5;
     rating: number = 3.5;
     labelText: number = this.rating;
+    labelHidden:boolean = false;
     color:starRatingColors;
     speed:starRatingSpeed|string;
     size: starRatingSizes|string;
@@ -25,6 +27,7 @@ export class SingleController {
     readOnly: boolean = false;
     disabled: boolean = false;
     showHalfStars:boolean = false;
+    showHoverStars:boolean = true;
     //component input functions (> bindings)
     getColor;
     useCustomCetColor:boolean = false;
@@ -36,6 +39,10 @@ export class SingleController {
     }
 
     //component output (& bindings)
+    onHover($event:IStarRatingOnHoverEvent): void {
+        console.log('single onHover rating: ',$event.hoverRating);
+    }
+
     onClick($event:IStarRatingOnClickEvent): void {
         console.log('single onClick rating: ',$event.rating);
     }

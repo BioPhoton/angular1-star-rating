@@ -13,6 +13,7 @@ export class StarRatingComponent implements ng.IComponentOptions {
               id: '<'
             , rating: '<'
             , showHalfStars: '<'
+            , showHoverStars: '<'
             , numOfStars: '<'
             , size: '<'
             , space: '<'
@@ -20,13 +21,14 @@ export class StarRatingComponent implements ng.IComponentOptions {
             , disabled: '<'
             , starType: '<'
             , labelText: '<'
-            , labelVisible: '<'
+            , labelHidden: '<'
             , labelPosition: '<'
             , speed : '<'
             , readOnly: '<'
             , getColor: '<'
             , getHalfStarVisible: '<'
 
+            , onHover: '&'
             , onClick: '&'
             , onRatingChange: '&'
         };

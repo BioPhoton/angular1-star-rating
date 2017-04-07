@@ -16,7 +16,7 @@
   "homepage": "https://github.com/BioPhoton/angular-star-rating#readme",
   "main": "index.js",
   "devDependencies": {
-    "angular1-star-rating": "1.2.5",
+    "angular1-star-rating": "1.2.9",
     "bootstrap": "^4.0.0-alpha.4",
     "css-loader": "^0.25.0",
     "del": "^2.2.2",
@@ -34,7 +34,7 @@
     "ngtemplate-loader": "^1.3.1",
     "node-sass": "^3.10.0",
     "ntypescript": "^1.201609060105.1",
-    "sass-loader": "^4.0.2",
+    "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
     "typedoc": "^0.4.5",
@@ -47,8 +47,8 @@
     "angular-ui-router": "^0.3.1"
   },
   "scripts": {
-      "postinstall": "typings install"
-    , "build": "webpack --progress --colors"
-    , "serve": "npm run build && http-server -c-1 -o -p 9875 ./dist"
+    "postinstall": "typings install",
+    "build": "webpack --progress --colors",
+    "serve": "npm run build && http-server -c-1 -o -p 9875 ./dist"
   }
 }
