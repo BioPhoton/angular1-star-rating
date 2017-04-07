@@ -13,6 +13,7 @@ export class StarRatingComponent implements ng.IComponentOptions {
               id: '<'
             , rating: '<'
             , showHalfStars: '<'
+            , showHoverStars: '<'
             , numOfStars: '<'
             , size: '<'
             , space: '<'

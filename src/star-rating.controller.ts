@@ -10,8 +10,6 @@ import {
     , IStarRatingOnUpdateEvent, IStarRatingOnHoverEvent
 } from "star-rating.structs"
 
-import IChangesObject = ng.IChanges;
-
 export class StarRatingController implements ng.IComponentController, IStarRatingCompBindings {
 
     static DefaultClassEmpty: string = "default-star-empty-icon";
@@ -21,6 +19,8 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
     static DefaultClassFilled: string = "default-star-filled-icon";
 
     static DefaultNumOfStars: number = 5;
+
+    static DefaultShowHoverStars:boolean = false;
 
     static DefaultSize: starRatingSizes = "medium";
 
@@ -118,6 +118,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
     protected _labelText: string;
     protected _staticColor: starRatingColors;
     protected _labelPosition: starRatingPosition;
+    protected _labelVisible: boolean;
     protected _speed: starRatingSpeed;
     protected _size: starRatingSizes;
     protected _starType: starRatingStarTypes;
@@ -125,6 +126,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
     protected _readOnly: boolean;
     protected _disabled: boolean;
     protected _showHalfStars: boolean;
+    protected _showHoverStars: boolean;
     protected _rating: number;
     protected _numOfStars: number;
     getHalfStarVisible: (rating: number) => boolean;
@@ -207,6 +209,13 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         return this._showHalfStars;
     }
 
+    set showHoverStars(value: boolean) {
+        this._showHoverStars = !!value;
+    }
+    get showHoverStars(): boolean {
+        return this._showHoverStars;
+    }
+
     set disabled(value: boolean) {
         this._disabled = !!value;
     }
@@ -256,6 +265,14 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         return this._labelPosition;
     }
 
+    set labelVisible(value: boolean) {
+        this._labelVisible = value || StarRatingController.DefaultShowHoverStars;
+    }
+    get labelVisible(): boolean {
+        return this._labelVisible;
+    }
+
+
     set staticColor(value: starRatingColors) {
         this._staticColor = value || undefined;
 
@@ -278,6 +295,27 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
     }
     get id(): string {
         return this._id;
+    }
+
+
+    getComponentClassNames():string {
+        let classNames:string[] = [];
+
+        classNames.push(this.rating?'value-'+this.ratingAsInteger:'value-0');
+        classNames.push(this.showHoverStars?'hover':'');
+        classNames.push(this.hoverRating?'hover-'+this.hoverRating:'hover-0');
+        classNames.push(this.halfStarVisible?'half':'');
+        classNames.push(this.space?'space-'+this.space:'');
+        classNames.push(this.labelVisible?'label-'+this.labelVisible:'');
+        classNames.push(this.labelPosition?'label-'+this.labelPosition:'');
+        classNames.push(this.color?'color-'+this.color:'');
+        classNames.push(this.starType?'star-'+this.starType:'');
+        classNames.push(this.speed);
+        classNames.push(this.size);
+        classNames.push(this.readOnly?'read-only':'');
+        classNames.push(this.disabled?'disabled':'');
+
+        return classNames.join(' ');
     }
 
     svgVisible():boolean {
@@ -321,6 +359,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         this.pathFilled = StarRatingController.DefaultSvgPathFilled;
 
         //set default Component Inputs
+        this._showHoverStars = StarRatingController.DefaultShowHoverStars;
         this._numOfStars = StarRatingController.DefaultNumOfStars;
         this.stars = StarRatingController._getStarsArray(this.numOfStars);
         this.setColor();
@@ -377,7 +416,12 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         }
 
         if (valueChanged('disabled', changes)) {
-            this.disabled = !!changes.disabled.currentValue;
+            this.disabled = changes.disabled.currentValue;
+        }
+
+        if(valueChanged('labelVisible', changes)) {
+            console.log('labelVisible: ', changes);
+            this.labelVisible = changes.labelVisible.currentValue
         }
 
         //number
@@ -442,13 +486,12 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
 
     protected onStarHover(rating: number): void {
 
-        if (!this.interactionPossible()) {
+        if (!this.interactionPossible() || !this.showHoverStars) {
             return;
         }
 
-        console.log('onStarHover: ', rating);
-        this.hoverRating = parseInt(rating.toString());
-
+        this.hoverRating = rating?parseInt(rating.toString()):0;
+        console.log('onStarHover: ', this.hoverRating);
         //fire onHover event
         let $event:IStarRatingOnHoverEvent = { hoverRating: this.hoverRating};
         if(typeof this.onHover === 'function') {
@@ -458,7 +501,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
     }
 
     protected interactionPossible():boolean {
-        return  !(this.readOnly || this.disabled);
+        return  !this.readOnly && !this.disabled;
     }
 
 }

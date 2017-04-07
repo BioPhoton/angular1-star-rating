@@ -18,6 +18,8 @@ export interface IStarRatingCompBindings {
     readOnly?: boolean;
     disabled?: boolean;
     showHalfStars?: boolean;
+    labelVisible?: boolean;
+    showHoverStars?: boolean;
     rating?: number;
     numOfStars?: number;
     getHalfStarVisible?(rating: number): boolean;
