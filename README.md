@@ -80,6 +80,7 @@ It also provides callbacks for all calculation functions used in the component a
 **Load library as ts module*
 ```typescript
     import angularStars = require('angular1-star-rating/dist/index.js');
+    const angularStars = angularStars;
 ```
 
 **Inject it into angular**
