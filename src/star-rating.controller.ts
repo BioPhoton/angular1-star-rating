@@ -1,13 +1,13 @@
 import {
     IStarRatingCompBindings
-    ,starRatingSizes
+    , starRatingSizes
     , starRatingSpeed
     , starRatingPosition
     , starRatingStarTypes
     , starRatingColors
     , starRatingStarSpace
     , IStarRatingOnClickEvent
-    , IStarRatingOnUpdateEvent
+    , IStarRatingOnUpdateEvent, IStarRatingOnHoverEvent
 } from "star-rating.structs"
 
 import IChangesObject = ng.IChanges;
@@ -131,6 +131,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
     getColor: (rating: number, numOfStars: number, staticColor?: starRatingColors) => starRatingColors;
 
     //outputs
+    onHover?: ($event: any) =>  IStarRatingOnHoverEvent;
     onClick?: ($event: any) =>  IStarRatingOnClickEvent;
     onRatingChange?: ($event: any) => IStarRatingOnUpdateEvent;
 
@@ -145,6 +146,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
 
     color: starRatingColors;
     stars: Array<number>;
+    hoverRating:number;
     ratingAsInteger: number;
     halfStarVisible: boolean;
 
@@ -424,7 +426,8 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
      * @param rating
      */
     protected onStarClicked(rating: number): void {
-        if (this.readOnly || this.disabled) {
+
+        if (!this.interactionPossible()) {
             return;
         }
 
@@ -435,6 +438,27 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         if(typeof this.onClick === 'function') {
             this.onClick({$event:$event});
         }
+    }
+
+    protected onStarHover(rating: number): void {
+
+        if (!this.interactionPossible()) {
+            return;
+        }
+
+        console.log('onStarHover: ', rating);
+        this.hoverRating = parseInt(rating.toString());
+
+        //fire onHover event
+        let $event:IStarRatingOnHoverEvent = { hoverRating: this.hoverRating};
+        if(typeof this.onHover === 'function') {
+            this.onHover({$event:$event});
+        }
+
+    }
+
+    protected interactionPossible():boolean {
+        return  !(this.readOnly || this.disabled);
     }
 
 }
