@@ -21,7 +21,7 @@ export class StarRatingComponent implements ng.IComponentOptions {
             , disabled: '<'
             , starType: '<'
             , labelText: '<'
-            , labelVisible: '<'
+            , labelHidden: '<'
             , labelPosition: '<'
             , speed : '<'
             , readOnly: '<'

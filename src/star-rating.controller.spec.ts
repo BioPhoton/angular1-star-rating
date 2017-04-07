@@ -46,7 +46,7 @@ describe('Star rating controller', () => {
         expect(starRatingCtrl.labelText).toBe(undefined);
         expect(starRatingCtrl.staticColor).toBe(undefined);
         expect(starRatingCtrl.labelPosition).toBe(undefined);
-        expect(starRatingCtrl.labelVisible).toBe(undefined);
+        expect(starRatingCtrl.labelHidden).toBe(undefined);
         expect(starRatingCtrl.showHoverStars).toBe(false);
         expect(starRatingCtrl.speed).toBe(undefined);
         expect(starRatingCtrl.size).toBe(undefined);
@@ -125,7 +125,7 @@ describe('Star rating controller', () => {
             , labelText: 'custom-text'
             , staticColor: 'positive'
             , labelPosition: 'right'
-            , labelVisible: false
+            , labelHidden: false
             , showHoverStars: true
             , speed: 'immediately'
             , size: 'small'
@@ -156,7 +156,7 @@ describe('Star rating controller', () => {
         expect(starRatingCtrl.labelText).toBe(bindings.labelText);
         expect(starRatingCtrl.staticColor).toBe(bindings.staticColor);
         expect(starRatingCtrl.labelPosition).toBe(bindings.labelPosition);
-        expect(starRatingCtrl.labelVisible).toBe(bindings.labelVisible);
+        expect(starRatingCtrl.labelHidden).toBe(bindings.labelHidden);
         expect(starRatingCtrl.showHoverStars).toBe(bindings.showHoverStars);
         expect(starRatingCtrl.speed).toBe(bindings.speed);
         expect(starRatingCtrl.size).toBe(bindings.size);

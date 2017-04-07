@@ -28,6 +28,8 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
 
     static DefaultLabelPosition: starRatingPosition = "left";
 
+    static DefaultLabelHidden: boolean = false;
+
     static DefaultStarType: starRatingStarTypes = "svg";
 
     static DefaultAssetsPath: string = "assets/images/";
@@ -118,7 +120,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
     protected _labelText: string;
     protected _staticColor: starRatingColors;
     protected _labelPosition: starRatingPosition;
-    protected _labelVisible: boolean;
+    protected _labelHidden: boolean;
     protected _speed: starRatingSpeed;
     protected _size: starRatingSizes;
     protected _starType: starRatingStarTypes;
@@ -265,11 +267,11 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         return this._labelPosition;
     }
 
-    set labelVisible(value: boolean) {
-        this._labelVisible = value || StarRatingController.DefaultShowHoverStars;
+    set labelHidden(value: boolean) {
+        this._labelHidden = !!value;
     }
-    get labelVisible(): boolean {
-        return this._labelVisible;
+    get labelHidden(): boolean {
+        return this._labelHidden;
     }
 
 
@@ -306,7 +308,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         classNames.push(this.hoverRating?'hover-'+this.hoverRating:'hover-0');
         classNames.push(this.halfStarVisible?'half':'');
         classNames.push(this.space?'space-'+this.space:'');
-        classNames.push(this.labelVisible?'label-'+this.labelVisible:'');
+        classNames.push(this.labelHidden?'label-hidden':'label-visible');
         classNames.push(this.labelPosition?'label-'+this.labelPosition:'');
         classNames.push(this.color?'color-'+this.color:'');
         classNames.push(this.starType?'star-'+this.starType:'');
@@ -360,6 +362,7 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
 
         //set default Component Inputs
         this._showHoverStars = StarRatingController.DefaultShowHoverStars;
+        this.labelHidden = StarRatingController.DefaultLabelHidden;
         this._numOfStars = StarRatingController.DefaultNumOfStars;
         this.stars = StarRatingController._getStarsArray(this.numOfStars);
         this.setColor();
@@ -419,9 +422,8 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
             this.disabled = changes.disabled.currentValue;
         }
 
-        if(valueChanged('labelVisible', changes)) {
-            console.log('labelVisible: ', changes);
-            this.labelVisible = changes.labelVisible.currentValue
+        if(valueChanged('labelHidden', changes)) {
+            this.labelHidden = changes.labelHidden.currentValue
         }
 
         //number
