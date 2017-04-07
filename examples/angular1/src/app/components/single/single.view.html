@@ -13,6 +13,7 @@
                     id="single.id"
                     rating="single.rating"
                     show-half-stars="single.showHalfStars"
+                    show-hover-stars="single.showHoverStars"
                     disabled="single.disabled"
                     read-only="single.readOnly"
                     space="single.space"
@@ -22,9 +23,11 @@
                     speed="single.speed"
                     label-text="single.rating"
                     label-position="single.position"
+                    label-hidden="single.labelHidden"
                     star-type="single.starType"
                     get-color="single.getColor"
                     get-half-star-visible="single.getHalfStarVisible"
+                    on-hover="single.onHover($event)"
                     on-click="single.onClick($event)"
                     on-rating-change="single.onRatingChange($event)">
             </star-rating-comp>
@@ -74,7 +77,13 @@
                 <fieldset class="form-group">
                     <legend>Layout</legend>
                     <div class="form-check">
-                        <label class="col-4 col-form-label">Lable Position</label>
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" ng-model="single.labelHidden">
+                            Label Hidden
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="col-4 col-form-label">Label Position</label>
                         <div class="col-8">
                             <select class="form-control" ng-model="single.position">
                                 <option value="">position</option>
@@ -209,6 +218,13 @@
                         <label class="form-check-label">
                             <input type="checkbox" class="form-check-input" ng-model="single.showHalfStars">
                             showHalfStars
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" ng-model="single.showHoverStars">
+                            showHoverStars
                         </label>
                     </div>
 

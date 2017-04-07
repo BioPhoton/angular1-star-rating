@@ -1,12 +1,14 @@
-import { IStarRatingCompBindings, starRatingSizes, starRatingSpeed, starRatingPosition, starRatingStarTypes, starRatingColors, starRatingStarSpace, IStarRatingOnClickEvent, IStarRatingOnUpdateEvent } from "star-rating.structs";
+import { IStarRatingCompBindings, starRatingSizes, starRatingSpeed, starRatingPosition, starRatingStarTypes, starRatingColors, starRatingStarSpace, IStarRatingOnClickEvent, IStarRatingOnUpdateEvent, IStarRatingOnHoverEvent } from "star-rating.structs";
 export declare class StarRatingController implements ng.IComponentController, IStarRatingCompBindings {
     static DefaultClassEmpty: string;
     static DefaultClassHalf: string;
     static DefaultClassFilled: string;
     static DefaultNumOfStars: number;
+    static DefaultShowHoverStars: boolean;
     static DefaultSize: starRatingSizes;
     static DefaultSpeed: starRatingSpeed;
     static DefaultLabelPosition: starRatingPosition;
+    static DefaultLabelHidden: boolean;
     static DefaultStarType: starRatingStarTypes;
     static DefaultAssetsPath: string;
     static DefaultSvgPath: string;
@@ -51,6 +53,7 @@ export declare class StarRatingController implements ng.IComponentController, IS
     protected _labelText: string;
     protected _staticColor: starRatingColors;
     protected _labelPosition: starRatingPosition;
+    protected _labelHidden: boolean;
     protected _speed: starRatingSpeed;
     protected _size: starRatingSizes;
     protected _starType: starRatingStarTypes;
@@ -58,10 +61,12 @@ export declare class StarRatingController implements ng.IComponentController, IS
     protected _readOnly: boolean;
     protected _disabled: boolean;
     protected _showHalfStars: boolean;
+    protected _showHoverStars: boolean;
     protected _rating: number;
     protected _numOfStars: number;
     getHalfStarVisible: (rating: number) => boolean;
     getColor: (rating: number, numOfStars: number, staticColor?: starRatingColors) => starRatingColors;
+    onHover?: ($event: any) => IStarRatingOnHoverEvent;
     onClick?: ($event: any) => IStarRatingOnClickEvent;
     onRatingChange?: ($event: any) => IStarRatingOnUpdateEvent;
     classEmpty: string;
@@ -72,11 +77,13 @@ export declare class StarRatingController implements ng.IComponentController, IS
     pathFilled: string;
     color: starRatingColors;
     stars: Array<number>;
+    hoverRating: number;
     ratingAsInteger: number;
     halfStarVisible: boolean;
     numOfStars: number;
     rating: number;
     showHalfStars: boolean;
+    showHoverStars: boolean;
     disabled: boolean;
     readOnly: boolean;
     space: starRatingStarSpace;
@@ -84,9 +91,12 @@ export declare class StarRatingController implements ng.IComponentController, IS
     size: starRatingSizes;
     speed: starRatingSpeed;
     labelPosition: starRatingPosition;
+    labelHidden: boolean;
     staticColor: starRatingColors;
     labelText: string;
     id: string;
+    getComponentClassNames(): string;
+    svgVisible(): boolean;
     setColor(): void;
     setHalfStarVisible(): void;
     constructor();
@@ -109,4 +119,6 @@ export declare class StarRatingController implements ng.IComponentController, IS
      * @param rating
      */
     protected onStarClicked(rating: number): void;
+    protected onStarHover(rating: number): void;
+    protected interactionPossible(): boolean;
 }

@@ -16,12 +16,18 @@ export interface IStarRatingCompBindings {
     readOnly?: boolean;
     disabled?: boolean;
     showHalfStars?: boolean;
+    labelHidden?: boolean;
+    showHoverStars?: boolean;
     rating?: number;
     numOfStars?: number;
     getHalfStarVisible?(rating: number): boolean;
     getColor?(rating: number, numOfStars: number, staticColor?: starRatingColors): starRatingColors;
+    onHover?: ($event: any) => any;
     onClick?: ($event: any) => any;
     onRatingChange?: ($event: any) => any;
+}
+export interface IStarRatingOnHoverEvent {
+    hoverRating: number;
 }
 export interface IStarRatingOnClickEvent {
     rating: number;
