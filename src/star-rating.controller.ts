@@ -278,6 +278,10 @@ export class StarRatingController implements ng.IComponentController, IStarRatin
         return this._id;
     }
 
+    svgVisible():boolean {
+        return this.starType === "svg";
+    }
+
     setColor() {
         //check if custom function is given
         if(typeof this.getColor === "function") {

@@ -9,17 +9,17 @@
         ng-repeat="star in $ctrl.stars track by $index"
         ng-click="$ctrl.onStarClicked(star)">
 
-        <i class="star-empty {{$ctrl.classEmpty}}"></i>
-        <i class="star-half {{$ctrl.classHalf}}"></i>
-        <i class="star-filled {{$ctrl.classFilled}}"></i>
+        <i class="star-empty {{$ctrl.classEmpty}}" ng-if="!$ctrl.svgVisible()"></i>
+        <i class="star-half {{$ctrl.classHalf}}" ng-if="!$ctrl.svgVisible()"></i>
+        <i class="star-filled {{$ctrl.classFilled}}" ng-if="!$ctrl.svgVisible()"></i>
 
-        <svg class="star-empty {{$ctrl.classEmpty}}" ng-if="$ctrl.starType ==='svg'">
+        <svg class="star-empty {{$ctrl.classEmpty}}" ng-if="$ctrl.svgVisible()">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{$ctrl.pathEmpty}}"></use>
         </svg>
-        <svg class="star-half {{$ctrl.classHalf}}" ng-if="$ctrl.starType ==='svg'">
+        <svg class="star-half {{$ctrl.classHalf}}" ng-if="$ctrl.svgVisible()">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{$ctrl.pathHalf}}"></use>
         </svg>
-        <svg class="star-filled {{$ctrl.classFilled}}" ng-if="$ctrl.starType ==='svg'">
+        <svg class="star-filled {{$ctrl.classFilled}}" ng-if="$ctrl.svgVisible()">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{$ctrl.pathFilled}}"></use>
         </svg>
 
