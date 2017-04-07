@@ -46,7 +46,7 @@ describe('Star rating controller', () => {
         expect(starRatingCtrl.labelText).toBe(undefined);
         expect(starRatingCtrl.staticColor).toBe(undefined);
         expect(starRatingCtrl.labelPosition).toBe(undefined);
-        expect(starRatingCtrl.labelHidden).toBe(undefined);
+        expect(starRatingCtrl.labelHidden).toBe(false);
         expect(starRatingCtrl.showHoverStars).toBe(false);
         expect(starRatingCtrl.speed).toBe(undefined);
         expect(starRatingCtrl.size).toBe(undefined);
