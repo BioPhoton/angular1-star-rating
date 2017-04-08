@@ -78,12 +78,6 @@ It also provides callbacks for all calculation functions used in the component a
 <script src="[bower or npm folder or git-cdn path]/angular1-star-rating/dist/index.js"></script>
 ```
 
-**Load library as ts module*
-```typescript
-    import angularStars = require('angular1-star-rating/dist/index.js');
-    const angularStars = angularStars;
-```
-
 **Inject it into angular**
 ```javascript
 angular.module('myApp', ['star-rating'])
