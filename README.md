@@ -78,6 +78,8 @@ It also provides callbacks for all calculation functions used in the component a
 <script src="[bower or npm folder or git-cdn path]/angular1-star-rating/dist/index.js"></script>
 ```
 
+**Note:You need to provide svg file (star icon) under assets/images directory, other it won't show anything but blank space**
+
 **Inject it into angular**
 ```javascript
 angular.module('myApp', ['star-rating'])
