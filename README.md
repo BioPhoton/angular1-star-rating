@@ -193,7 +193,7 @@ Options: default, negative, ok, positive
 Default: undefined  
 
 ```html
-<star-rating-comp color="'positive'"></star-rating-comp>
+<star-rating-comp static-color="'positive'"></star-rating-comp>
 ```
 <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-color-default.PNG" width="290">
 <img src="https://raw.githubusercontent.com/BioPhoton/angular1-star-rating/master/resources/prop-color-positive.PNG" width="290">  
